@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<!----------------------------------------------------------------------------------------------------------------- HTML //// HEAD ------------------------------------------------------------------------------------------------------------------>
+<head>
+<!-------------------------------BROWSER-STUFF------------------------------->
+<title>{block:PostSummary}{PostSummary} : {/block:PostSummary}{Title}</title>
+<link rel="shortcut icon" href="{favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/jpg" href="{Favicon}"/>
+<!------------------------------BROWSER-STUFF-END---------------------------->
+<!-------------------------Changeable Variables Start------------------------>
+   <meta name="color:Color 1" content="#B20000"/>
+   <meta name="color:Color 2" content="#000"/>
+   <meta name="color:Color 3" content="#111"/>
+   <meta name="color:Color 4" content="#CCC"/>
+   <meta name="color:Color 5" content="#FFF"/>
+   
+   <meta name="text:Title 1" content="Cherryblight"/>
+   <meta name="text:Title 2" content="The Arrow of Retribution."/>
+   
+   <meta name="text:Link 1" content="https://cherryblight.carrd.co/"/>
+   <meta name="text:Link 1 Title" content="Carrd"/>
+   <meta name="text:Link 1 Icon" content="card"/>
+   
+   <meta name="text:Link 2" content="/rules"/>
+   <meta name="text:Link 2 Title" content="Guidelines"/>
+   <meta name="text:Link 2 Icon" content="document"/>
+   
+   <meta name="text:Link 3" content="/about"/>
+   <meta name="text:Link 3 Title" content="Muse"/>
+   <meta name="text:Link 3 Icon" content="user"/>
+   
+   <meta name="text:Link 4" content="/playlist"/>
+   <meta name="text:Link 4 Title" content="Playlist"/>
+   <meta name="text:Link 4 Icon" content="music-note"/>
+   
+   <meta name="text:Link 5" content="/navi"/>
+   <meta name="text:Link 5 Title" content="Navigation"/>
+   <meta name="text:Link 5 Icon" content="plus"/>
+   
+   <meta name="image:Background" content="https://cdn.discordapp.com/attachments/828517039513534495/834095589721374720/unknown.png"/>
+   <meta name="image:Link Cover" content="https://cdn.discordapp.com/attachments/828517039513534495/836843611949236264/BOW.png"/>
+   
+   <meta name="if:SiteBorder" content="true"/>
+<!--------------------------Changeable Variables End------------------------->
+<!-------------------------External Style Sheet Start------------------------>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Roboto&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+<!-------------------------External Style Sheet End-------------------------->
+  
+</head><!------------------------------------------------------------------------------------------------------- HEAD //// BODY ---------------------------------------------------------------------------------------------------><body>
+<!--------------------------------Site Border Start-------------------------->
+{block:ifSiteBorder}
+<div id="siteborder" class="top"></div>
+<div id="siteborder" class="left"><a href="/"><h1>{text:Title 1}</h1><h2>{text:Title 2}</a></h2></div>
+<div id="siteborder" class="bottom"></div>
+{/block:ifSiteBorder}
+<!---------------------------------Site Border End---------------------------->
+<!--------------------------------DA LINKZ. Start---------------------------->
+<div class="linkz">
+<div class="bottomrightlinks"><a href="/ask" title="Ask" target="_"><i class="cp cp-question-mark"></i></a></div>
+<div class="bottomrightlinks"><a href="/submit" title="Submit" target="_"><i class="cp cp-paper-plane"></i></a></div>
+<div class="bottomrightlinks"><a href="{text:Link 1}" title="{text:Link 1 Title}" target="_"><i class="cp cp-{text:Link 1 Icon}"></i></a></div>
+<div class="bottomrightlinks"><a href="{text:Link 2}" title="{text:Link 2 Title}" target="_"><i class="cp cp-{text:Link 2 Icon}"></i></a></div>
+<div class="bottomrightlinks"><a href="{text:Link 3}" title="{text:Link 3 Title}" target="_"><i class="cp cp-{text:Link 3 Icon}"></i></a></div>
+<div class="bottomrightlinks"><a href="{text:Link 4}" title="{text:Link 4 Title}" target="_"><i class="cp cp-{text:Link 4 Icon}"></i></a></div>
+<div class="bottomrightlinks"><a href="{text:Link 5}" title="{text:Link 5 Title}" target="_"><i class="cp cp-{text:Link 5 Icon}"></i></a></div>
+</div>
+    
+<!--------------------------------------------------------------------------------------------------------- DO NOT TOUCH /// CREDIT ------------------------------------------------------------------------------------------------------------------><a href="https://cherryblight.tumblr.com/" title="CREDIT!" target="_"><img src="{image:Link Cover}" class="credit"/></a>
+<!--------------------------------------------------------------------------------------------------------- DO NOT TOUCH /// CREDIT ------------------------------------------------------------------------------------------------------------------>
+<!----------------------------------DA LINKZ. End---------------------------->
+<!---------------------------------- Posts Start ---------------------------->
+    <div id="posts">
+            {block:Posts}
+            
+            <div class="poststitle">
+            {block:Title}
+            <h2 href="{Permalink}" class="title">{Title}</h1>
+            {/block:Title}
+            
+            
+                {block:Text}
+                <div class="post body">
+                
+                <div class="postbar">
+                {block:Date}
+                <a href="{Permalink}"><i class="cp cp-clock"></i> {DayofMonth} {Shortmonth} {ShortYear}</a>
+                {/block:Date}
+                <div class="rightbar">
+                {block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParentName}">VIA</a> | <a title="{ReblogRootName}" href="{ReblogRootURL}">SRC</a>{/block:RebloggedFrom} 
+                </div>
+                </div>
+                
+                {Body}
+                </div>
+                {/block:Text}
+                
+                
+                
+                {block:Photo}
+                    <div class="post photo">
+                    <div class="postbar">
+                {block:Date}
+                <a href="{Permalink}"><i class="cp cp-clock"></i> {DayofMonth} {Shortmonth} {ShortYear}</a>
+                {/block:Date}
+                <div class="rightbar">
+                {block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParentName}">VIA</a> | <a title="{ReblogRootName}" href="{ReblogRootURL}">SRC</a>{/block:RebloggedFrom} 
+                </div>
+                </div>
+                    
+                        <a href="{PhotoURL}"><img src="{PhotoURL-500}" class="photopst" alt="{PhotoAlt}"/></a>
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Photo}
+                
+                
+                
+                {block:Photoset}
+                    <div class="post photoset">
+                    
+                    <div class="postbar">
+                {block:Date}
+                <a href="{Permalink}"><i class="cp cp-clock"></i> {DayofMonth} {Shortmonth} {ShortYear}</a>
+                {/block:Date}
+                <div class="rightbar">
+                {block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParentName}">VIA</a> | <a title="{ReblogRootName}" href="{ReblogRootURL}">SRC</a>{/block:RebloggedFrom} 
+                </div>
+                </div>
+                    
+                        {Photoset-500}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Photoset}
+                
+                
+                
+                
+                {block:Quote}
+                    <div class="post quote">
+                    
+                    <div class="postbar">
+                {block:Date}
+                <a href="{Permalink}"><i class="cp cp-clock"></i> {DayofMonth} {Shortmonth} {ShortYear}</a>
+                {/block:Date}
+                <div class="rightbar">
+                {block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParentName}">VIA</a> | <a title="{ReblogRootName}" href="{ReblogRootURL}">SRC</a>{/block:RebloggedFrom} 
+                </div>
+                </div>
+                    
+                        <div class="thequote">"{Quote}"</div>
+
+                        {block:Source}
+                            <div class="source">- {Source}</div>
+                        {/block:Source}
+                    </div>
+                {/block:Quote}
+                
+                
+                
+                {block:Link}
+                    <div class="post link">
+                    
+                    <div class="postbar">
+                {block:Date}
+                <a href="{Permalink}"><i class="cp cp-clock"></i> {DayofMonth} {Shortmonth} {ShortYear}</a>
+                {/block:Date}
+                <div class="rightbar">
+                {block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParentName}">VIA</a> | <a title="{ReblogRootName}" href="{ReblogRootURL}">SRC</a>{/block:RebloggedFrom} 
+                </div>
+                </div>
+                    
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </div>
+                {/block:Link}
+                
+                
+                
+                {block:Chat}
+                    <div class="post">
+                    
+                    <div class="postbar">
+                {block:Date}
+                <a href="{Permalink}"><i class="cp cp-clock"></i> {DayofMonth} {Shortmonth} {ShortYear}</a>
+                {/block:Date}
+                <div class="rightbar">
+                {block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParentName}">VIA</a> | <a title="{ReblogRootName}" href="{ReblogRootURL}">SRC</a>{/block:RebloggedFrom} 
+                </div>
+                </div>
+                    
+                {block:Lines}
+                <div class="chat">
+                {block:Label}
+                <span class="chat_label">{Label}</span>
+                {/block:Label}
+                <span class="chat_content">{Line}</span>
+                </div>
+                {/block:Lines}
+                </div>
+                {/block:Chat}
+                
+                
+                
+                {block:Video}
+                    <div class="post video">
+                    
+                    <div class="postbar">
+                {block:Date}
+                <a href="{Permalink}"><i class="cp cp-clock"></i> {DayofMonth} {Shortmonth} {ShortYear}</a>
+                {/block:Date}
+                <div class="rightbar">
+                {block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParentName}">VIA</a> | <a title="{ReblogRootName}" href="{ReblogRootURL}">SRC</a>{/block:RebloggedFrom} 
+                </div>
+                </div>
+                    
+                        {Video-500}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Video}
+                
+                
+                
+                {block:Audio}
+                    <div class="post audio">
+                    
+                    <div class="postbar">
+                {block:Date}
+                <a href="{Permalink}"><i class="cp cp-clock"></i> {DayofMonth} {Shortmonth} {ShortYear}</a>
+                {/block:Date}
+                <div class="rightbar">
+                {block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParentName}">VIA</a> | <a title="{ReblogRootName}" href="{ReblogRootURL}">SRC</a>{/block:RebloggedFrom} 
+                </div>
+                </div>
+                    
+                        <div class="audiombed">{AudioEmbed}</div>{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Audio}
+                    
+                    
+                    
+                    {block:Answer}
+    <div class="post ask">
+    
+    <div class="postbar">
+                {block:Date}
+                <a href="{Permalink}"><i class="cp cp-clock"></i> {DayofMonth} {Shortmonth} {ShortYear}</a>
+                {/block:Date}
+                <div class="rightbar">
+                {block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParentName}">VIA</a> | <a title="{ReblogRootName}" href="{ReblogRootURL}">SRC</a>{/block:RebloggedFrom} 
+                </div>
+                </div>
+    
+        <div class="question">
+            <span style="color:#b20000" class="questioner">{Asker}</span> asked: {Question}
+        </div>
+        
+    
+    {block:Answerer}
+    <div class="comment_container">
+        <div class="answerer_ answer">
+            
+            <span>{Answerer} answered:</span> 
+        </div>
+        <div class="answer_text">{Answer}</div>
+    </div>
+    {block:Reblogs}
+    <div class="comment_container">
+        <div class="replier answer">
+            <a href="{block:HasPermalink}{Permalink}{/block:HasPermalink}">{Username}</a>
+        </div>
+        <div class="reply">{Body}</div>
+    </div>
+    {/block:Reblogs}
+    {/block:Answerer}
+    {block:NotReblog}
+    <div class="comment_container">
+        <div class="answerer answer">
+            <a href="{Permalink}">{Name}</a>
+        </div><!--answerer-->
+        <div class="answer_text">{Answer}</div>
+    </div><!--answer-container-->
+    {/block:NotReblog}
+    </div>
+    {/block:Answer}
+    
+    
+    <div class="bottomtext note">
+    
+    <a href="{Permalink}"style="float:right;padding-right:3px;margin-top:1px;">{NoteCountWithLabel}</a>
+    
+    <a class="reblog" href="{ReblogURL}" title="REBLOG?" style="text-align-last:left"><i class="cp cp-reblog-alt"></i></a>
+
+        
+    </div>
+                </div>{/block:Posts}
+
+{block:Pagination}
+<div class="navigation">    
+    {block:PreviousPage}
+     <a href="{PreviousPage}" class="pag"><i class="cp cp-arrow-left"></i></a> 
+    {/block:PreviousPage}
+    {block:NextPage}
+     <a href="{NextPage}"class="pag"><i class="cp cp-arrow-right"></i></a>
+    {/block:NextPage}
+</div>
+    {/block:Pagination}
+        </div>
+<!----------------------------------- Posts End ----------------------------->
+<!-----------------------------------Script Start---------------------------->
+<script src="//pull.cappuccicons.com/cpf.js"></script>
+<!------------------------------------Script End----------------------------->
+</body><!-------------------------------------------------------------------------------------------------------- BODY //// HTML -------------------------------------------------------------------------------------------------></html>
